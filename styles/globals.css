@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Courier New", monospace;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg
+           bg-brand-600 text-white font-medium text-sm
+           hover:bg-brand-700 active:bg-brand-900
+           transition-colors shadow-soft;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg
+           bg-white text-ink-800 font-medium text-sm border border-ink-200
+           hover:bg-ink-50 active:bg-ink-100
+           transition-colors;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-card p-6 border border-ink-100;
+  }
+
+  .input-base {
+    @apply w-full px-3.5 py-2.5 rounded-lg border border-ink-200
+           bg-white text-ink-800 text-sm
+           focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent
+           transition;
+  }
+}
