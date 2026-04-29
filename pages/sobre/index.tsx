@@ -1,24 +1,31 @@
 import PageHeader from "@/components/ui/PageHeader";
-
-/**
- * 🚧 PÁGINA DO ALUNO 2 🚧
- *
- * Esta página está aguardando implementação. Substitua todo o conteúdo
- * abaixo pelo seu conteúdo da página "Sobre", seguindo o roteiro da prova.
- */
+ 
 export default function SobrePage() {
   return (
     <>
       <PageHeader
-        eyebrow="Aluno 2"
-        title="Sobre"
-        description="Esta página ainda não foi implementada."
+        eyebrow="Quem somos"
+        title="Sobre o Projeto"
+        description="Saiba como este Sistema de Paginas foi construido."
       />
-      <div className="card text-center py-12">
-        <p className="text-ink-600">
-          Aluno 2: substitua este placeholder pela sua implementação.
-        </p>
+ 
+      <div className="grid md:grid-cols-2 gap-6">
+        <article className="card">
+          <h3 className="font-semibold text-ink-900 mb-2">Nossa missao</h3>
+          <p className="text-sm text-ink-600">
+            Demonstrar na pratica como uma equipe de desenvolvedores trabalha
+            de forma colaborativa usando Git, branches e Pull Requests.
+          </p>
+        </article>
+        <article className="card">
+          <h3 className="font-semibold text-ink-900 mb-2">Como foi feito</h3>
+          <p className="text-sm text-ink-600">
+            Cada pagina foi construida por um integrante diferente em sua
+            propria branch e integrada via Pull Requests no GitHub.
+          </p>
+        </article>
       </div>
     </>
   );
 }
+
