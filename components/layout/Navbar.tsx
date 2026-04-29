@@ -13,7 +13,14 @@ import { cn } from "@/lib/utils";
  */
 const navLinks: { href: string; label: string }[] = [
   // ====== INÍCIO DA ÁREA DE EDIÇÃO COLABORATIVA ======
-    { href: "/contato", label: "Contato" },
+
+
+  { href: "/sobre", label: "Sobre" },
+  { href: "/", label: "Inicio" },
+  { href: "/servicos", label: "Servicos" },
+  { href: "/contato", label: "Contato" },
+
+
   // ====== FIM DA ÁREA DE EDIÇÃO COLABORATIVA ======
 ];
 
@@ -48,7 +55,7 @@ export default function Navbar() {
                     "px-3 py-2 rounded-lg font-medium transition-colors",
                     isActive
                       ? "bg-brand-50 text-brand-700"
-                      : "text-ink-600 hover:text-ink-900 hover:bg-ink-50"
+                      : "text-ink-600 hover:text-ink-900 hover:bg-ink-50",
                   )}
                 >
                   {link.label}
@@ -58,7 +65,10 @@ export default function Navbar() {
           })}
         </ul>
 
-        <Link href="/contato" className="btn-primary text-xs hidden sm:inline-flex">
+        <Link
+          href="/contato"
+          className="btn-primary text-xs hidden sm:inline-flex"
+        >
           Fale Conosco
         </Link>
       </div>
